@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+<div class="container-fluid" style="display: flex;">
+    <div style="width:20%;justify-content: left;">
+        <ul style="list-style-type: none; overflow-y: auto; height: 500px;padding: 5%;">
+            {% for title in ai_title %}
+           <li><a href="/aipost/{{title.slug}}">{{ title.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div style="justify-content: right;width: 80%; height: auto;padding:5%;">
+        
+        <!-- {{ai_post.title}}
+        {{ai_post.content}}
+        {{ai_post.date}} -->
+
+        <div>
+            <h2>{{ai_post.title}}</h2>
+            <span>{{ai_post.date}}</span>
+            <br/><br/>
+            <div>{{ai_post.content}}</div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

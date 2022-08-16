@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+<div class="container-fluid" style="display: flex;">
+    <div style="width:20%;justify-content: left;">
+        <ul style="list-style-type: none; overflow-y: auto; height: 500px;padding: 5%;">
+            {% for title in web_title %}
+           <li><a href="/webpost/{{title.slug}}">{{ title.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div style="justify-content: right;width: 80%; height: auto;padding:5%;">
+        
+        <!-- {{web_post.title}}
+        {{web_post.content}}
+        {{web_post.date}} -->
+        <div>
+            <h2>{{web_post.title}}</h2>
+            <span>{{web_post.date}}</span>
+            <br/><br/>
+            <div>{{web_post.content}}</div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

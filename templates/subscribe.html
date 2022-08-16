@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+<div class="container my-5" style="width: 50%;">
+  <h5>To Get notification about our new posts please subscribe us.</h5>
+  <form>
+<div class="mb-3">
+  <label for="exampleInputEmail1" class="form-label">Email address</label>
+  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+</div>
+<div>Choose Subjects</div>
+<div class="form-check my-2">
+  <input class="form-check-input" type="checkbox" name="aimldl" value="" id="aimldl">
+  <label class="form-check-label" for="aimldl">
+    AI ML DL
+  </label>
+</div>
+<div class="form-check my-2">
+  <input class="form-check-input" type="checkbox" name="cloud" value="" id="cloud">
+  <label class="form-check-label" for="cloud">
+    Cloud & Devops
+  </label>
+</div>
+<div class="form-check my-2">
+  <input class="form-check-input" type="checkbox" name="blockchain" value="" id="blockchain">
+  <label class="form-check-label" for="blockchain">
+    Blockchain
+  </label>
+</div>
+<div class="form-check my-2">
+  <input class="form-check-input" type="checkbox" name="webdevelopment" value="" id="webdevelopment">
+  <label class="form-check-label" for="webdevelopment">
+    Web Development
+  </label>
+</div>
+<div class="form-check my-2">
+  <input class="form-check-input" type="checkbox" name="datastructure" value="" id="datastructure">
+  <label class="form-check-label" for="datastructure">
+    Data Structure
+  </label>
+</div>
+<div class="form-check my-2">
+  <input class="form-check-input" type="checkbox" name="science" value="" id="science">
+  <label class="form-check-label" for="science">
+    Science
+  </label>
+</div>
+
+<button type="submit" class="btn btn-primary" onclick="suscribe()">Subscribe</button>
+</form>
+</div>
+
+
+{% endblock %}

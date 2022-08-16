@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+
+<main class="container">
+  <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+    <div class="text-center" >
+      <h1>Welcome to {{params.blog_name}}</h1>
+      <p class="lead my-3">A place for conceptual understanding of Artificial Intelligence with Machine Learning and Deep Learning.</p>
+    </div>
+  </div>
+
+  <div>
+    <div class="row mb-2">
+      {% for post in ai_post %}
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">AI ML DL</strong>
+            <a href="/aipost/{{post.slug}}" style="text-decoration: none;color: #000">
+            <h3 class="mb-0" >{{post.title}}</h3>
+          
+            <div class="mb-1 text-muted">{{post.date}}</div>
+            <div class="card-text mb-auto">{{post.content[0:60]}}...</div>
+            </a>
+          </div>
+          {% set fname='assets/images/ai/' + post.image %}
+          <div class="col-auto d-none d-lg-block">
+            <img class="bd-placeholder-img" width="200" height="250" src="{{ url_for('static', filename=fname) }}"/>
+          </div>
+        </div>
+      </div>
+      
+      {% endfor %}
+    </div>
+
+    <div class="row mb-2">
+      {% for post in cloud_post %}
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">Cloud & Devops</strong>
+            <a href="/cloudpost/{{post.slug}}" style="text-decoration: none;color: #000">
+            <h3 class="mb-0">{{post.title}}</h3>
+            <div class="mb-1 text-muted">{{post.date}}</div>
+            <div class="card-text mb-auto">{{post.content[0:60]}}...</div>
+            </a>
+          </div>
+          {% set fname='assets/images/cloud/' + post.image %}
+          <div class="col-auto d-none d-lg-block">
+            <img class="bd-placeholder-img" width="200" height="250" src="{{ url_for('static', filename=fname) }}"/>
+          </div>
+        </div>
+      </div>
+      
+      {% endfor %}
+    </div>
+
+    <div class="row mb-2">
+      {% for post in web_post %}
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">Web Development</strong>
+            <a href="/webpost/{{post.slug}}" style="text-decoration: none;color: #000">
+            <h3 class="mb-0">{{post.title}}</h3>
+            <div class="mb-1 text-muted">{{post.date}}</div>
+            <div class="card-text mb-auto">{{post.content[0:60]}}...</div>
+            </a>
+          </div>
+          {% set fname='assets/images/web/' + post.image %}
+          <div class="col-auto d-none d-lg-block">
+            <img class="bd-placeholder-img" width="200" height="250" src="{{ url_for('static', filename=fname) }}"/>
+          </div>
+        </div>
+      </div>
+      
+      {% endfor %}
+    </div>
+
+  </div>
+</main>
+
+{% endblock %}
