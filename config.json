@@ -1,0 +1,12 @@
+{
+	"params" : {
+		"local_server" : "True",
+        "local_uri" : "mysql://root:@localhost/myblog",
+        "prod_uri" : "mysql://root:@localhost/myblog",
+        "fb_url" : "https://facebook.com/myblog",
+        "insta_url" : "https://www.instagram.com/myblog",
+        "tw_url" : "https://twitter.com/myblog",
+        "gh_url" : "https://github.com/myblog",
+		"blog_name" : "MyBlog"
+	}
+}
